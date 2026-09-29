@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Enter your Title">
+        <input type="text" name="author" placeholder="Enter Author Name">
+        <input type="number" name="price" placeholder="Enter Price">
+        <input type="date" name="published_date" placeholder="Enter Published Date">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
